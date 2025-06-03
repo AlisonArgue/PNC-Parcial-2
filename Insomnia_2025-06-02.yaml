@@ -1,0 +1,219 @@
+type: collection.insomnia.rest/5.0
+name: Parcial2
+meta:
+  id: wrk_10ca63c3c22f449fa664908e597434ce
+  created: 1748910502301
+  modified: 1748910502301
+collection:
+  - url: localhost:8190/create
+    name: NewBook
+    meta:
+      id: req_1404e541cb27441e8aef744c41c33a9a
+      created: 1748910506259
+      modified: 1748917351775
+      isPrivate: false
+      sortKey: -1748910506259
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title" : "ku",
+        	"author": "sheal",
+        	"isbn": "328-1-8284-7109-4", 
+        	"publicationYear" : "2022",
+        	"language" : "spanish",
+        	"pages" : "20",
+        	"genre" : "rome"
+        	
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8190/getAll
+    name: GetAll
+    meta:
+      id: req_2d49e62eeb6748b2b434c7df3b79dac9
+      created: 1748915746248
+      modified: 1748916113554
+      isPrivate: false
+      sortKey: -1748915746248
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8190/update/00f598c2-0b59-41f0-976f-8ffa09e50eb9
+    name: Update
+    meta:
+      id: req_ff0f675d7d4e47b1aa789ee91f55c894
+      created: 1748915782764
+      modified: 1748916107776
+      isPrivate: false
+      sortKey: -1748915782764
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"newLanguage": "english",
+        	"newTitle" : "Juliet"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8190/get/00f598c2-0b59-41f0-976f-8ffa09e50eb9
+    name: GetById
+    meta:
+      id: req_de9e177a41354ecda5020c46f1ef33b7
+      created: 1748916048884
+      modified: 1748916099121
+      isPrivate: false
+      sortKey: -1748916048884
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8190/delete/fcaa5fce-0ff2-40c2-9991-92c6f2cc4492
+    name: New Request
+    meta:
+      id: req_84bb3b35891f41e4b3d85097405dc1aa
+      created: 1748916153083
+      modified: 1748916243115
+      isPrivate: false
+      sortKey: -1748916153083
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8190/getByAuthor
+    name: GetByAAuthor
+    meta:
+      id: req_00d85b8c802f42a7b7b82774590978db
+      created: 1748916941774
+      modified: 1748916997099
+      isPrivate: false
+      sortKey: -1748916941774
+    method: GET
+    parameters:
+      - id: pair_4006c378fe20417091ef1689b7a77811
+        name: author
+        value: sheal
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8190/getByGenre
+    name: GetByGenre
+    meta:
+      id: req_f5a66dd406ac46519d84de8fdc857917
+      created: 1748917016304
+      modified: 1748917063606
+      isPrivate: false
+      sortKey: -1748917016304
+    method: GET
+    parameters:
+      - id: pair_d5872764d5f242b29f7a2399143fae10
+        name: genre
+        value: rome
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8190/getIsbn
+    name: GetByIsbn
+    meta:
+      id: req_b5ef701f9cad47dd9ec76cc66970ca30
+      created: 1748917077312
+      modified: 1748917385437
+      isPrivate: false
+      sortKey: -1748917077312
+    method: GET
+    parameters:
+      - id: pair_97d8dd120ba84a4bb7392e9303b590bc
+        name: isbn
+        value: 328-1-8284-7109-4
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_06caa35e686970a75a6ed1ea413aec39fdb936e6
+    created: 1748910502313
+    modified: 1748910502313
+environments:
+  name: Base Environment
+  meta:
+    id: env_06caa35e686970a75a6ed1ea413aec39fdb936e6
+    created: 1748910502307
+    modified: 1748910502307
+    isPrivate: false
